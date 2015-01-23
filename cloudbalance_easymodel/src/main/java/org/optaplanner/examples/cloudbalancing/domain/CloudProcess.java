@@ -21,7 +21,7 @@ import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
 
-@PlanningEntity()
+@PlanningEntity // annotation for planner. says which classes are entities.
 @XStreamAlias("CloudProcess")
 public class CloudProcess extends AbstractPersistable {
 
@@ -56,7 +56,7 @@ public class CloudProcess extends AbstractPersistable {
         this.requiredNetworkBandwidth = requiredNetworkBandwidth;
     }
 
-    @PlanningVariable(valueRangeProviderRefs = {"computerRange"})
+    @PlanningVariable(valueRangeProviderRefs = {"computerRange"}) // annotation for planner. says from where specific entity can obtain values
     public CloudComputer getComputer() {
         return computer;
     }

@@ -15,15 +15,17 @@
   </scoreDirectorFactory>
 
   <termination>
-    <secondsSpentLimit>120</secondsSpentLimit>
+    <secondsSpentLimit>30</secondsSpentLimit>
   </termination>
   <constructionHeuristic>
     <constructionHeuristicType>FIRST_FIT_DECREASING</constructionHeuristicType>
   </constructionHeuristic>
   <localSearch>
     <unionMoveSelector>
-      <changeMoveSelector/>
-      <swapMoveSelector/>
+        <changeMoveSelector/>
+        <swapMoveSelector/>
+        <pillarChangeMoveSelector/>
+        <pillarSwapMoveSelector/>
     </unionMoveSelector>
     <acceptor>
       <entityTabuSize>50</entityTabuSize>

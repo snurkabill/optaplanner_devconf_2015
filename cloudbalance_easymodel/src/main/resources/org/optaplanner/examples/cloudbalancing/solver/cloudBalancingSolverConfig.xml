@@ -15,13 +15,14 @@
     <!-- Optimization algorithms configuration -->
   
   <termination>
-      <secondsSpentLimit>120</secondsSpentLimit>
+      <secondsSpentLimit>30</secondsSpentLimit>
   </termination>
     <constructionHeuristic>
         <constructionHeuristicType>FIRST_FIT</constructionHeuristicType>
     </constructionHeuristic>
-  
-    <localSearch>
+
+    <!-- try to run solution without and then with local search. Observe difference!-->
+    <!--localSearch>
         <unionMoveSelector>
             <swapMoveSelector/>
         </unionMoveSelector>
@@ -29,10 +30,7 @@
             <entityTabuSize>5</entityTabuSize>
         </acceptor>
         <forager>
-            <acceptedCountLimit>1000</acceptedCountLimit>
-            <!-- LET'S TRY different size of acceptedCountLimit!-->
-            <!--acceptedCountLimit>100</acceptedCountLimit-->
-            <!--acceptedCountLimit>10</acceptedCountLimit-->
+            <acceptedCountLimit>100</acceptedCountLimit>
         </forager>
-    </localSearch>
+    </localSearch-->
 </solver>

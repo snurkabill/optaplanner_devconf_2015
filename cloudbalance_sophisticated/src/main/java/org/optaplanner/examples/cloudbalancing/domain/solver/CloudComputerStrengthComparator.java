@@ -24,6 +24,8 @@ import org.optaplanner.examples.cloudbalancing.domain.CloudComputer;
 
 public class CloudComputerStrengthComparator implements Comparator<CloudComputer>, Serializable {
 
+    // we take "mightiness" of all computers and compare them. it is easier to start with bigger ones and
+    // end up with filling the smallest ones.
     public int compare(CloudComputer a, CloudComputer b) {
         return new CompareToBuilder()
                 .append(a.getMultiplicand(), b.getMultiplicand())

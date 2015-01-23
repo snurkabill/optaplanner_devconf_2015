@@ -24,6 +24,8 @@ import org.optaplanner.examples.cloudbalancing.domain.CloudProcess;
 
 public class CloudProcessDifficultyComparator implements Comparator<CloudProcess>, Serializable {
 
+    // we take "mightiness" of all process and compare them. it is easier to start with bigger ones and
+    // end up with placing the smallest ones.
     public int compare(CloudProcess a, CloudProcess b) {
         return new CompareToBuilder()
                 .append(a.getRequiredMultiplicand(), b.getRequiredMultiplicand())

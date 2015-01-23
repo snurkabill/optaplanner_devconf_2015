@@ -31,7 +31,7 @@ import org.optaplanner.core.impl.score.buildin.hardsoft.HardSoftScoreDefinition;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
 import org.optaplanner.persistence.xstream.impl.score.XStreamScoreConverter;
 
-@PlanningSolution
+@PlanningSolution // annotation for planner. indicates, what is planning solution
 @XStreamAlias("CloudBalance")
 public class CloudBalance extends AbstractPersistable implements Solution<HardSoftScore> {
 
@@ -42,7 +42,7 @@ public class CloudBalance extends AbstractPersistable implements Solution<HardSo
     @XStreamConverter(value = XStreamScoreConverter.class, types = {HardSoftScoreDefinition.class})
     private HardSoftScore score;
 
-    @ValueRangeProvider(id = "computerRange")
+    @ValueRangeProvider(id = "computerRange") // annotation for planner. says from where planner can find values for entities.
     public List<CloudComputer> getComputerList() {
         return computerList;
     }
@@ -51,7 +51,7 @@ public class CloudBalance extends AbstractPersistable implements Solution<HardSo
         this.computerList = computerList;
     }
 
-    @PlanningEntityCollectionProperty
+    @PlanningEntityCollectionProperty // annotation for planner. annotates from where planner can get list of entities.
     public List<CloudProcess> getProcessList() {
         return processList;
     }

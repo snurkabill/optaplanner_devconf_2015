@@ -23,7 +23,7 @@ import org.optaplanner.examples.cloudbalancing.domain.solver.CloudComputerStreng
 import org.optaplanner.examples.cloudbalancing.domain.solver.CloudProcessDifficultyComparator;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
 
-@PlanningEntity(difficultyComparatorClass = CloudProcessDifficultyComparator.class)
+@PlanningEntity(difficultyComparatorClass = CloudProcessDifficultyComparator.class) // which comparator use for sorting entities
 @XStreamAlias("CloudProcess")
 public class CloudProcess extends AbstractPersistable {
 
@@ -59,7 +59,7 @@ public class CloudProcess extends AbstractPersistable {
     }
 
     @PlanningVariable(valueRangeProviderRefs = {"computerRange"},
-            strengthComparatorClass = CloudComputerStrengthComparator.class)
+            strengthComparatorClass = CloudComputerStrengthComparator.class) // which comparator use for sorting values
     public CloudComputer getComputer() {
         return computer;
     }
