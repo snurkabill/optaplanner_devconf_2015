@@ -1,21 +1,26 @@
 ============================== optaplanner devconf workshop 2015 ==============================
 
+--- TASK 1 ---
 1. open project in java IDE you've selected (just click on parent pom.xml)
-2. open sub-project called cloudbalance-easymodel
-3. search for src/main/java/org/optaplanner/examples/cloudbalancing/domain package and get familiar with inner classes
+2. open module called cloudbalance-easymodel
+3. search for src/main/java/org/optaplanner/examples/cloudbalancing/domain package and get familiar with java classes
 
-
+--- TASK 2 ---
 4. open src/main/resources/org/optaplanner/examples/cloudbalancing/solver/cloudBalancingSolverConfig.xml 
-5. execute runEasy.sh (or runEasy.bat), pick (TED MUSIME VYBRAT JAKY PRESNY SCENAR) and see what planner does. 
+5. execute runEasy.sh (or runEasy.bat), pick (TED MUSIME VYBRAT JAKY PRESNY SCENAR) and see what planner does 
 6. try to uncomment "localsearch" section in cloudBalancingSolverConfig.xml and do step 5. again
-7. observe difference
+7. observe the difference
 
-8. open sub-project called cloudbalance-sophisticated
-9. search for src/main/java/org/optaplanner/examples/cloudbalancing/domain package and get familiar with inner classes
+--- TASK 3 ---
+8. open module called cloudbalance-sophisticated
+9. search for src/main/java/org/optaplanner/examples/cloudbalancing/domain package and get familiar with java classes
    9a. there are extra annotations
    9b. there are extra files (comparators)
+   9c. run construction heuristic only and compare the difference
 10.  search for src/main/java/org/optaplanner/examples/cloudbalancing/solver/score 
    10a. check EasyScore score function and IncrementalScoreFunction
    10b. in cloudBalancingSolverConfig.xml try speed difference between easy and incremental score calculation
 
-   
+--- TASK 4 --- (optional)
+11. pick one score calculation (We strongly recommend EasyScoreCalculation, DRLscoreCalculation is also possible)
+12. add a new hard constraint: no computer should have more than 4 processes assigned to it
