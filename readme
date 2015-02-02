@@ -4,23 +4,29 @@
 1. open project in java IDE you've selected (just click on parent pom.xml)
 2. open module called cloudbalance-easymodel
 3. search for src/main/java/org/optaplanner/examples/cloudbalancing/domain package and get familiar with java classes
+   3a. which are planning entities and what are their variables?
+   3b. where they get values for variables?
 
 --- TASK 2 ---
 4. open src/main/resources/org/optaplanner/examples/cloudbalancing/solver/cloudBalancingSolverConfig.xml 
-5. execute runEasy.sh (or runEasy.bat), pick (TED MUSIME VYBRAT JAKY PRESNY SCENAR) and see what planner does 
+5. execute run_easy.sh (or run_easy.bat), pick (TED MUSIME VYBRAT JAKY PRESNY SCENAR) and see what planner does 
 6. try to uncomment "localsearch" section in cloudBalancingSolverConfig.xml and do step 5. again
-7. observe the difference
+7. observe the score difference
+   7a. why is score better?
+   7b. is there possibility that score after localsearch phase is not better? and why?  
 
 --- TASK 3 ---
 8. open module called cloudbalance-sophisticated
 9. search for src/main/java/org/optaplanner/examples/cloudbalancing/domain package and get familiar with java classes
    9a. there are extra annotations
-   9b. there are extra files (comparators)
-   9c. run construction heuristic only and compare the difference
-10.  search for src/main/java/org/optaplanner/examples/cloudbalancing/solver/score 
+   9b. there are extra files (comparators) - why do we need them? see in code 
+   9c. run construction heuristic only and compare time and score differences with TASK2
+       - config file: src/main/resources/org/optaplanner/examples/cloudbalancing/solver/cloudBalancingSolverConfig.xml
+10. search for src/main/java/org/optaplanner/examples/cloudbalancing/solver/score 
    10a. check EasyScore score function and IncrementalScoreFunction
+       - why do we need incremental score function?
    10b. in cloudBalancingSolverConfig.xml try speed difference between easy and incremental score calculation
 
 --- TASK 4 --- (optional)
-11. pick one score calculation (We strongly recommend EasyScoreCalculation, DRLscoreCalculation is also possible)
-12. add a new hard constraint: no computer should have more than 4 processes assigned to it
+11. pick one score calculation and add a new hard constraint: no computer should have more than 4 processes assigned to it
+   - note: incremental and map based scoreFunctions are harder for implementation 
