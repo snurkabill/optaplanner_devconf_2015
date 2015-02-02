@@ -54,22 +54,7 @@
       </configuration>
           
         </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>exec-maven-plugin</artifactId>
-          <configuration>
-            <executable>java</executable>
-            <classpathScope>runtime</classpathScope>
-            <arguments>
-              <argument>-Xms256m</argument>
-              <argument>-Xmx1024m</argument>
-              <argument>-server</argument>
-              <argument>-cp</argument>
-              <classpath/>
-              <argument>org.optaplanner.examples.cloudbalancing.app.CloudBalancingApp</argument>
-            </arguments>
-          </configuration>
-        </plugin>
+        
       </plugins>
     </pluginManagement>
   </build>
