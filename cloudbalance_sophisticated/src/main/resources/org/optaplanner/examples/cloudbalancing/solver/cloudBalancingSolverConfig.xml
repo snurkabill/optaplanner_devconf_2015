@@ -20,7 +20,7 @@
   <constructionHeuristic>
     <constructionHeuristicType>FIRST_FIT_DECREASING</constructionHeuristicType>
   </constructionHeuristic>
-  <localSearch>
+  <!--localSearch>
     <unionMoveSelector>
         <changeMoveSelector/>
         <swapMoveSelector/>
@@ -33,5 +33,5 @@
     <forager>
       <acceptedCountLimit>100</acceptedCountLimit>
     </forager>
-  </localSearch>
+  </localSearch-->
 </solver>

@@ -9,7 +9,9 @@
 
 --- TASK 2 ---
 4. open src/main/resources/org/optaplanner/examples/cloudbalancing/solver/cloudBalancingSolverConfig.xml 
-5. execute run_easy.sh (or run_easy.bat), pick (TED MUSIME VYBRAT JAKY PRESNY SCENAR) and see what planner does 
+5. execute run_easy.sh (or run_easy.bat), pick "15 computers with 45 processes" scenario and see what planner does
+   - graphic output (very fast, you may miss it)
+   - see log in terminal 
 6. try to uncomment "localsearch" section in cloudBalancingSolverConfig.xml and do step 5. again
 7. observe the score difference
    7a. why is score better?
