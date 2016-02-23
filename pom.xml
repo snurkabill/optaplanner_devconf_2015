@@ -7,7 +7,7 @@
     <!--
      Keep in sync with optaplanner-training-generator/build.xml project.version
     -->
-    <version>6.2.0.CR1-training-2</version>
+    <version>6.3.0.Final</version>
     <name>OptaPlanner training</name>
     <description>
         OptaPlanner solves planning problems. This lightweight, embeddable planning engine implements powerful and
