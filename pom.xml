@@ -7,7 +7,7 @@
     <!--
      Keep in sync with optaplanner-training-generator/build.xml project.version
     -->
-    <version>6.3.0.Final</version>
+    <version>6.2.0.Final</version>
     <name>OptaPlanner training</name>
     <description>
         OptaPlanner solves planning problems. This lightweight, embeddable planning engine implements powerful and
@@ -15,9 +15,6 @@
         labs.
     </description>
     <repositories>
-        <!--
-         Included so it builds out-of-the-box with maven, even for snapshots
-        -->
         <repository>
             <id>jboss-public-repository-group</id>
             <name>JBoss Public Repository Group</name>
@@ -37,22 +34,22 @@
     </repositories>
     <dependencyManagement>
         <dependencies>
+        	<dependency>
+      			<groupId>org.optaplanner</groupId>
+      			<artifactId>optaplanner-core</artifactId>
+      			<version>6.2.0.Final</version>
+    		</dependency>
             <dependency>
                 <groupId>org.kie</groupId>
                 <artifactId>kie-parent-with-dependencies</artifactId>
                 <type>pom</type>
-                <version>6.2.0.CR1</version>
+                <version>6.2.0.Final</version>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.optaplanner</groupId>
                 <artifactId>optaplanner-training-docs</artifactId>
                 <type>pom</type>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.optaplanner</groupId>
-                <artifactId>optaplanner-training-lab101</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -66,6 +63,7 @@
     <modules>
         <module>cloudbalance_easymodel</module>
         <module>cloudbalance_sophisticated</module>
+        <module>bin-packing</module>
     </modules>
     <build>
         <pluginManagement>
