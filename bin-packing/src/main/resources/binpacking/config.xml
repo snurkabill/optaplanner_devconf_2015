@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+    <environmentMode>REPRODUCIBLE</environmentMode>
+
+    <solutionClass>binpacking.domain.BinPacking</solutionClass>
+    <entityClass>binpacking.domain.Brick</entityClass>
+
+    <scoreDirectorFactory>
+        <scoreDefinitionType>HARD_SOFT</scoreDefinitionType>
+        <easyScoreCalculatorClass>binpacking.BinPackingScoreFunction</easyScoreCalculatorClass>
+    </scoreDirectorFactory>
+
+    <constructionHeuristic>
+        <constructionHeuristicType>FIRST_FIT</constructionHeuristicType>
+    </constructionHeuristic>
+
+    <localSearch>
+        <termination>
+            <stepCountLimit>1000</stepCountLimit>
+        </termination>
+        <!--MOVE SELECTORS-->
+        <unionMoveSelector>
+            <changeMoveSelector/>
+            <swapMoveSelector/>
+            <pillarChangeMoveSelector/>
+            <pillarSwapMoveSelector/>
+        </unionMoveSelector>
+
+
+        <!--HILL CLIMBING-->
+        <acceptor>
+            <acceptorType>HILL_CLIMBING</acceptorType>
+        </acceptor>
+        <forager>
+            <acceptedCountLimit>1</acceptedCountLimit>
+        </forager>
+
+
+
+        <!--TABU SEARCH-->
+        <!--<acceptor>-->
+            <!--&lt;!&ndash;<entityTabuSize>7</entityTabuSize>&ndash;&gt;-->
+            <!--<entityTabuRatio>0.1</entityTabuRatio>-->
+        <!--</acceptor>-->
+        <!--<forager>-->
+            <!--<acceptedCountLimit>1000</acceptedCountLimit>-->
+        <!--</forager>-->
+
+
+        <!--SIMULATED ANNEALING-->
+        <!--<acceptor>-->
+            <!--<simulatedAnnealingStartingTemperature>1000hard/1soft</simulatedAnnealingStartingTemperature>-->
+        <!--</acceptor>-->
+        <!--<forager>-->
+            <!--<acceptedCountLimit>1</acceptedCountLimit>-->
+        <!--</forager>-->
+
+
+        <!--LATE ACCEPTANCE-->
+        <!--<acceptor>-->
+            <!--<lateAcceptanceSize>100</lateAcceptanceSize>-->
+        <!--</acceptor>-->
+        <!--<forager>-->
+            <!--<acceptedCountLimit>1</acceptedCountLimit>-->
+        <!--</forager>-->
+
+
+
+        <!--WE CAN EVEN COMBINE SOME HEURISTICS-->
+        <!--<acceptor>-->
+            <!--<lateAcceptanceSize>400</lateAcceptanceSize>-->
+            <!--<entityTabuSize>5</entityTabuSize>-->
+        <!--</acceptor>-->
+        <!--<forager>-->
+            <!--<acceptedCountLimit>1</acceptedCountLimit>-->
+        <!--</forager>-->
+
+    </localSearch>
+</solver>
