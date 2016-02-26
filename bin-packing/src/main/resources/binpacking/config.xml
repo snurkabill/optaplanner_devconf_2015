@@ -2,18 +2,6 @@
 <solver>
     <environmentMode>REPRODUCIBLE</environmentMode>
 
-    <solutionClass>binpacking.domain.BinPacking</solutionClass>
-    <entityClass>binpacking.domain.Brick</entityClass>
-
-    <scoreDirectorFactory>
-        <scoreDefinitionType>HARD_SOFT</scoreDefinitionType>
-        <easyScoreCalculatorClass>binpacking.BinPackingScoreFunction</easyScoreCalculatorClass>
-    </scoreDirectorFactory>
-
-    <constructionHeuristic>
-        <constructionHeuristicType>FIRST_FIT</constructionHeuristicType>
-    </constructionHeuristic>
-
     <localSearch>
         <termination>
             <stepCountLimit>1000</stepCountLimit>

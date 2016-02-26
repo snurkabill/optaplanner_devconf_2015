@@ -1,16 +1,11 @@
 package binpacking.domain;
 
-import org.optaplanner.core.api.domain.entity.PlanningEntity;
-import org.optaplanner.core.api.domain.variable.PlanningVariable;
-
-@PlanningEntity
 public class Brick {
 
     private int volume;
 
     private Bin bin;
 
-    @PlanningVariable(valueRangeProviderRefs = {"binRange"})
     public Bin getBin() {
         return bin;
     }
